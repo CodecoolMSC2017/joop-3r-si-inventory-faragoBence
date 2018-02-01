@@ -8,7 +8,7 @@ public class BookProduct extends Product {
         this.numOfPages = numOfPages;
     }
 
-    public int getNumOfPages(){
+    public int getNumOfPages() {
         return numOfPages;
     }
 }

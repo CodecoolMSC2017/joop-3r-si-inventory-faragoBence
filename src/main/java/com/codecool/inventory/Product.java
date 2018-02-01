@@ -8,10 +8,12 @@ public abstract class Product {
         this.name = name;
         this.price = price;
     }
+
     public int getPrice() {
         return price;
     }
-    public String getName(){
-        return  name;
+
+    public String getName() {
+        return name;
     }
 }
