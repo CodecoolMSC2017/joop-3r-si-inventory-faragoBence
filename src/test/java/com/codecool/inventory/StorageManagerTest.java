@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StorageManagerTest {
-    StorageManager storageManager;
+    private StorageManager storageManager;
 
     @BeforeEach
     void setUp() {

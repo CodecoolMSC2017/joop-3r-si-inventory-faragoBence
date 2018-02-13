@@ -1,11 +1,12 @@
 package com.codecool.inventory;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         StorageManager myStorage = new StorageManager();
-        myStorage.addStorage(new PersistentStore());
-        myStorage.addCDProduct("Meteora", 25, 14);
-        myStorage.addBookProduct("1984", 20, 220);
+        CsvStore storage = new CsvStore();
+        storage.loadProducts("files.csv");
+        storage.saveProducts("files.csv");
+        myStorage.addStorage(storage);
         System.out.println(myStorage.listProducts());
         System.out.println(myStorage.getTotalProductprice());
     }

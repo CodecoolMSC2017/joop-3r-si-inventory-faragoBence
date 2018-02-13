@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Store implements StoreCapable {
-    List<Product> listOfProducts = new ArrayList();
+    final List<Product> listOfProducts = new ArrayList();
 
     private void saveToXml() {
 
@@ -80,10 +80,8 @@ public abstract class Store implements StoreCapable {
                     transformer.transform(source, result);
                 }
             }
-        } catch (ParserConfigurationException pcex) {
+        } catch (ParserConfigurationException | TransformerException pcex) {
             pcex.printStackTrace();
-        } catch (TransformerException tfex) {
-            tfex.printStackTrace();
         }
     }
 
@@ -124,7 +122,7 @@ public abstract class Store implements StoreCapable {
         return listOfProducts;
     }
 
-    public void store(Product product) {
+    private void store(Product product) {
         storeProduct(product);
         saveToXml();
     }

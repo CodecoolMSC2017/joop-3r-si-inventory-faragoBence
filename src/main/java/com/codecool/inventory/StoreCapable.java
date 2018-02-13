@@ -3,7 +3,7 @@ package com.codecool.inventory;
 import java.util.ArrayList;
 import java.util.List;
 
-public interface StoreCapable {
+interface StoreCapable {
 
     List<Product> getAllProduct();
 

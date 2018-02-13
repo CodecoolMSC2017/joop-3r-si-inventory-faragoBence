@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CDProductTest {
-    CDProduct cd;
+    private CDProduct cd;
 
     @BeforeEach
     void setUp() {

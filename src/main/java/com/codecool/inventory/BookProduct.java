@@ -1,7 +1,7 @@
 package com.codecool.inventory;
 
-public class BookProduct extends Product {
-    private int numOfPages;
+class BookProduct extends Product {
+    private final int numOfPages;
 
     public BookProduct(String name, int price, int numOfPages) {
         super(name, price);

@@ -2,8 +2,8 @@ package com.codecool.inventory;
 
 import java.util.List;
 
-public class StorageManager {
-    StoreCapable storage;
+class StorageManager {
+    private StoreCapable storage;
 
 
     public void addStorage(StoreCapable storage) {
@@ -20,12 +20,12 @@ public class StorageManager {
     }
 
     public String listProducts() {
-        String str = "";
+        StringBuilder str = new StringBuilder();
         List<Product> products = storage.getAllProduct();
         for (Product product : products) {
-            str += product.getName() + "\t";
+            str.append(product.getName()).append("\t");
         }
-        return str;
+        return str.toString();
     }
 
     public int getTotalProductprice() {

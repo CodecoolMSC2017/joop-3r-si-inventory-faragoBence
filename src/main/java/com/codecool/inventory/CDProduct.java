@@ -1,7 +1,7 @@
 package com.codecool.inventory;
 
-public class CDProduct extends Product {
-    private int numOfTracks;
+class CDProduct extends Product {
+    private final int numOfTracks;
 
     public CDProduct(String name, int price, int numOfTracks) {
         super(name, price);
